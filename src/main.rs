@@ -122,7 +122,6 @@ fn main() {
         let t0_loc = glGetAttribLocation(program, b"t0\0".as_ptr());
 
         loop {
-            // Умный polling в PASSTHROUGH: пауза после скролла, потом проверяем периодически
             if matches!(state.input_state, wayland::InputState::Passthrough) {
                 let can_poll = if let Some(last_scroll) = state.last_scroll {
                     last_scroll.elapsed().as_millis() > config.scroll_cooldown as u128

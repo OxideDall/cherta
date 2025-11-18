@@ -228,11 +228,10 @@ impl Dispatch<wl_pointer::WlPointer, ()> for WaylandState {
                 }
             }
             wl_pointer::Event::Axis { .. } => {
-                // Скролл → переход в PASSTHROUGH + обновляем время (продлеваем cooldown)
                 state.input_state = InputState::Passthrough;
                 state.set_input_passthrough(true);
                 state.drawing = false;
-                state.last_scroll = Some(std::time::Instant::now()); // Каждый скролл обновляет
+                state.last_scroll = Some(std::time::Instant::now());
             }
             wl_pointer::Event::Motion {
                 surface_x,
