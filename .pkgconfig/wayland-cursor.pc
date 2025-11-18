@@ -1,0 +1,10 @@
+prefix=/usr
+libdir=/usr/lib64
+includedir=/usr/include
+
+Name: wayland-cursor
+Description: Wayland cursor library
+Version: 1.24.0
+Requires: wayland-client
+Libs: -L${libdir} -lwayland-cursor
+Cflags: -I${includedir}

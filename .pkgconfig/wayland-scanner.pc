@@ -1,0 +1,6 @@
+prefix=/usr
+bindir=/usr/bin
+
+Name: wayland-scanner
+Description: Wayland scanner
+Version: 1.24.0

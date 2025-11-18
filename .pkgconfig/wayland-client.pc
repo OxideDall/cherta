@@ -1,0 +1,9 @@
+prefix=/usr
+libdir=/usr/lib64
+includedir=/usr/include
+
+Name: wayland-client
+Description: Wayland client library
+Version: 1.24.0
+Libs: -L${libdir} -lwayland-client
+Cflags: -I${includedir}
